@@ -30,19 +30,19 @@ So what does the pipeline require?
 Please view the manual in the documentation folder
 
 # R package dependencies
-BiocManager
-dada2
-optparse
-dplyr
-DECIPHER
-Biostrings
-msa
-ggplot2
-ggpubr
-RcppParallel
-openxlsx
-ShortRead
-seqTools
+BiocManager <br />
+dada2 <br />
+optparse <br />
+dplyr <br />
+DECIPHER <br />
+Biostrings <br />
+msa <br />
+ggplot2 <br />
+ggpubr <br />
+RcppParallel <br />
+openxlsx <br />
+ShortRead <br />
+seqTools <br />
 
 # Output files and steps
 ![image](https://user-images.githubusercontent.com/67581284/205045420-971d5a80-85bd-4264-8dae-1f406dafbc9d.png)

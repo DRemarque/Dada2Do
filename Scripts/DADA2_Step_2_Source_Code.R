@@ -51,6 +51,18 @@ Install_Check<-function(){
     message('Bioconductor not found. Installing now\n')
     suppressMessages(install.packages('BiocManager',repos=cran))
   }
+  if (!'ggplot2' %in% installed) {
+    message('ggplot2 not found. Installing now\n')
+    suppressMessages(install.packages('ggplot2',repos=cran))
+  }
+  if (!'RcppParallel' %in% installed) {
+    message('RcppParallel not found. Installing now\n')
+    suppressMessages(install.packages('RcppParallel',repos=cran))
+  }
+  if (!'openxlsx' %in% installed) {
+    message('openxlsx not found. Installing now\n')
+    suppressMessages(install.packages('openxlsx',repos=cran))
+  }
   if (!'dada2' %in% installed) {
     message('dada2 not found. Installing now\n')
     suppressMessages(BiocManager::install('dada2'))
@@ -60,8 +72,8 @@ Install_Check<-function(){
     suppressMessages(install.packages('optparse',repos=cran))
   }
   if (!'dplyr' %in% installed) {
-    message('optparse not found. Installing now\n')
-    suppressMessages(install.packages('optparse',repos=cran))
+    message('dplyr not found. Installing now\n')
+    suppressMessages(install.packages('dplyr',repos=cran))
   }
   if (!'DECIPHER' %in% installed) {
     message('DECIPHER not found in correct version. Installing now\n')
@@ -809,3 +821,4 @@ main<-function(opt=NULL){
             '\n and rerun the pipeline with overwrite=FALSE once the issue is fixed')
   }
 }#main
+

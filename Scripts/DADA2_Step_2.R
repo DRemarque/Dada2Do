@@ -21,6 +21,10 @@ arguments <- Argument_Parsing()
 # arguments$fastq_folder <- '/home/User/Myfolder/'
 # arguments$database     <- '/home/User/Mydatabase.fa.gz'
 
+## Don't forget to add truncation lengths!
+# arguments$truncLen_fw  <- 0
+# arguments$truncLen_rv  <- 0
+
 ## All other arguments can be left unchanged if the defaults below are okay
 ## Otherwise change them as necessary and unhash
 
@@ -29,8 +33,6 @@ arguments <- Argument_Parsing()
 # arguments$overwrite    <- TRUE
 
 # arguments$maxEE        <- 2
-# arguments$truncLen_fw  <- 0
-# arguments$truncLen_rv  <- 0
 # arguments$minLen       <- 20
 # arguments$truncQ       <- 2
 

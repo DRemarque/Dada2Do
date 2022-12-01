@@ -41,6 +41,18 @@ Install_Check<-function(){
     message('dada2 not found. Installing now\n')
     suppressMessages(BiocManager::install("dada2"))
   }
+  if (!'Biostrings' %in% installed) {
+    message('Biostrings not found. Installing now\n')
+    suppressMessages(BiocManager::install('Biostrings'))
+  }
+  if (!'ggplot2' %in% installed) {
+    message('ggplot2 not found. Installing now\n')
+    suppressMessages(install.packages('ggplot2',repos=cran))
+  }
+  if (!'ggpubr' %in% installed) {
+    message('ggpubr not found. Installing now\n')
+    suppressMessages(install.packages('ggpubr',repos=cran))
+  }
   if (!'ShortRead' %in% installed) {
     message('ShortRead not found. Installing now\n')
     suppressMessages(BiocManager::install("ShortRead"))
@@ -150,6 +162,12 @@ main<-function(opt=NULL){
   } else if(!dir.exists(opt$fastq_folder)){
     warning('Given folder cannot be found. Please check file path')
     fastqfolder()
+  } 
+  if(opt$truncLen_fw==0){
+    warning('Careful, there is no forward read truncation! Are you sure or did you forget to change fw truncLen?')
+  }
+  if(opt$truncLen_rv==0){
+    warning('Careful, there is no reverse read truncation! Are you sure or did you forget to change rv truncLen?')
   }
   
   # Pull all fastq files in the folder
@@ -427,7 +445,4 @@ main<-function(opt=NULL){
     warning('Given data is not paired end!\nClosing pipeline.')
   }
 }
-
-
-
 

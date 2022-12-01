@@ -1,16 +1,16 @@
 #!/bin/bash
-#SBATCH --job-name=16S_Processing       # Job name
-#SBATCH --mail-user=<s1838768@vuw.leidenuniv.com> # Where to send mail
+#SBATCH --job-name=dada2do1       # Job name
+#SBATCH --mail-user=<user@someadress.com> # Where to send mail
 #SBATCH --mail-type=FAIL,END           	# Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --partition=cpu-short		  	# Partition to use for the analysis
+#SBATCH --partition=cpu-short		  	    # Partition to use for the analysis
 #SBATCH --time=01:30:00               	# Time limit hrs:min:sec 
 #SBATCH --ntasks=1				        # Number of tasks per node
 #SBATCH --cpus-per-task=16				# Number of cpus requested per task
-#SBATCH --export=none           		# Recommended by ALICE Staff for a clean working environment
+#SBATCH --export=none           		# Recommended for a clean working environment
 
 # INPUT
-script_dir=/home/s1838768/Scripts/      # Location of all pipeline R scripts
-fastq_dir=/data1/s1838768/AllRawITS/    # Location of raw fastq files (forward files end with _1, reverse with _2)
+script_dir=/home/Scripts/       # Location of all pipeline R scripts
+fastq_dir=/data1/FastqFiles/    # Location of raw fastq files (forward files end with _1, reverse with _2)
 
 Forward_Primer_Sequence=GTGARTCATCRARTYTTTG   # Known forward primer sequence
 Reverse_Primer_Sequence=CCTSCSCTTANTDATATGC   # Known reverse primer sequence

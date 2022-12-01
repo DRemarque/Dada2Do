@@ -27,7 +27,7 @@ So what does the pipeline require?
 * One folder with all fastq files to be analysed together and access to write new files into that folder.
 
 # How to use the pipeline?
-Please view the manual in the documentation folder
+Please view the pipeline manual :)
 
 # R package dependencies
 BiocManager <br />
